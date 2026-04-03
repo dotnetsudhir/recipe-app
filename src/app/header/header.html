@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Recipe Book</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/recipes" routerLinkActive="active">Recipes</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/auth" routerLinkActive="active">Authenticate</a>
+          <a class="nav-link" routerLink="/shopping-list" routerLinkActive="active">Shopping List</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown" appDropdownDirective>
+          <a class="nav-link dropdown-toggle" href="#" role="button" (click)="$event.preventDefault()">
+            Manage
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" style="cursor: pointer;" (click)="saveData()">Save Data</a></li>
+            <li><a class="dropdown-item" style="cursor: pointer;" (click)="fetchData()">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
